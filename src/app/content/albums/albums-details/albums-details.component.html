@@ -1,0 +1,25 @@
+<div class="details-section pt-4">
+  <div class="jumbotron jumbotron-fluid m-0" *ngIf="!!album" [@enterAnimation]>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 text-center"><img [src]="album['im:image'][2].label" alt=""></div>
+        <div class="col-sm-7">
+          <h3>{{album['im:name']?.label}}</h3>
+          <a [href]="album['im:artist']?.attributes.href" target="_blank"
+             class="card-link mb-3 d-block">{{album['im:artist']?.label}}</a>
+          <p>Release Date: {{album['im:releaseDate'].label | date: 'yyyy-MM-dd'}}</p>
+          <p>Price: {{album['im:price'].attributes.amount | currency}}</p>
+        </div>
+      </div>
+      <div class="row action-buttons">
+        <div class="form-group float-left col-sm-4">
+          <button type="button" class="btn btn-outline-dark" (click)="onNavigateToList()">Back</button>
+        </div>
+      </div>
+      <div class="row rights">
+        <p class="col-sm-12 font-italic text-left">{{album.rights.label}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
