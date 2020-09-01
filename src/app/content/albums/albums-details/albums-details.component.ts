@@ -26,7 +26,6 @@ export class AlbumsDetailsComponent implements OnInit, OnDestroy {
     } else {
       this.subscription = this.albumsService.getAlbums().subscribe(resp => {
         this.album = resp.feed.entry[this.id];
-        console.log(this.album);
       });
     }
   }

@@ -21,7 +21,6 @@ export class AlbumsListComponent implements OnInit {
   ngOnInit() {
     this.createForm();
     this.albumService.getAlbums().subscribe((resp: any) => {
-      console.log(resp.feed);
       this.albumsDetails = resp.feed;
       this.albumService.albumsStorage = resp.feed;
     });
