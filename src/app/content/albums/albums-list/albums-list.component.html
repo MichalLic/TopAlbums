@@ -1,0 +1,9 @@
+<div class="albums-list">
+  <div class="row">
+    <div class="col-sm-12 col-md-4" *ngFor="let album of albumsDetails?.entry; let index=index">
+      <div class="card p-1 mb-4" (click)="onShowDetails(index)">
+        <img [src]="album['im:image'][2].label" class="card-img-top" alt="">
+      </div>
+    </div>
+  </div>
+</div>

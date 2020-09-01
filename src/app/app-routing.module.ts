@@ -8,12 +8,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'app',
+    redirectTo: 'app/albums',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: 'app',
+    redirectTo: 'app/albums',
   }
 ];
 
