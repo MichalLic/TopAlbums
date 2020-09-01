@@ -1,6 +1,12 @@
 <div class="albums-list pt-5">
+  <form [formGroup]="form">
+    <div class="form-group mb-5">
+      <input type="text" class="form-control" formControlName="search" placeholder="Search" aria-label="Search">
+    </div>
+  </form>
   <div class="row">
-    <div class="col-sm-12 col-md-4" *ngFor="let album of albumsDetails?.entry; let index=index">
+    <div class="col-sm-12 col-md-4"
+         *ngFor="let album of albumsDetails?.entry | searchPipe : form.value.search; let index=index">
       <div class="card p-1 mb-4 position-relative"
            (click)="onShowDetails(index)">
         <img [src]="album['im:image'][2].label" class="card-img-top" alt="">

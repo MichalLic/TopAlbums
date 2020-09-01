@@ -4,6 +4,10 @@
   background-color: $c-blue-dark;
 }
 
+.content-wrapper {
+  min-height: calc(100vh - 148px);
+}
+
 header, footer {
   color: $c-white;
 }
